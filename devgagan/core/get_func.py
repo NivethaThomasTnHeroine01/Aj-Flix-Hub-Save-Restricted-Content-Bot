@@ -105,7 +105,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     reply_to_message_id=topic_id,
                     parse_mode=ParseMode.MARKDOWN,
                     progress=progress_bar,
-                    progress_args=("╭─      **__Pyro Uploader__**", edit, time.time())
+                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├────────────────────\n│      **__Progress:__** {percent:.2f}%\n│      **__Done:__** {done_mb:.2f} MB / {total_mb:.2f} MB\n│      **__Speed:__** {speed_mbps:.2f} Mbps\n│      **__ETA:__** {remaining_time_min:.2f} min\n╰─────────────────────╯\n\n**__All Set ✅__**")
                 )
                 await dm.copy(LOG_GROUP)
                 
@@ -117,7 +117,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     parse_mode=ParseMode.MARKDOWN,
                     progress=progress_bar,
                     reply_to_message_id=topic_id,
-                    progress_args=("╭─      **__Pyro Uploader__**", edit, time.time())
+                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────\n│      **__Progress:__** {percent:.2f}%\n│      **__Done:__** {done_mb:.2f} MB / {total_mb:.2f} MB\n│      **__Speed:__** {speed_mbps:.2f} Mbps\n│      **__ETA:__** {remaining_time_min:.2f} min\n╰─────────────────────╯\n\n**__All Set ✅__**")
                 )
                 await dm.copy(LOG_GROUP)
             else:
@@ -129,7 +129,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     reply_to_message_id=topic_id,
                     progress=progress_bar,
                     parse_mode=ParseMode.MARKDOWN,
-                    progress_args=("╭─      **__Pyro Uploader__**", edit, time.time())
+                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────\n│      **__Progress:__** {percent:.2f}%\n│      **__Done:__** {done_mb:.2f} MB / {total_mb:.2f} MB\n│      **__Speed:__** {speed_mbps:.2f} Mbps\n│      **__ETA:__** {remaining_time_min:.2f} min\n╰─────────────────────╯\n\n**__All Set ✅__**")
                 )
                 await asyncio.sleep(2)
                 await dm.copy(LOG_GROUP)
