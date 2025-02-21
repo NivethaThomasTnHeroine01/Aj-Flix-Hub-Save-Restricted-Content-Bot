@@ -82,7 +82,10 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
         upload_method = await fetch_upload_method(sender)  # Fetch the upload method (Pyrogram or Telethon)
         metadata = video_metadata(file)
         width, height, duration = metadata['width'], metadata['height'], metadata['duration']
-        thumb_path = await screenshot(file, duration, sender)
+        try:
+            thumb_path = await screenshot(file, duration, sender)
+        except Exception:
+            thumb_path = None
 
         video_formats = {'mp4', 'mkv', 'avi', 'mov'}
         document_formats = {'pdf', 'docx', 'txt', 'epub'}
@@ -438,6 +441,11 @@ async def copy_message_with_chat_id(app, userbot, sender, chat_id, message_id, e
         # Fallback if result is None
         if result is None:
             await edit.edit("Trying if it is a group...")
+            try:
+                await userbot.join_chat(chat_id)
+            except Exception as e:
+                print(e)
+                pass
             chat_id = (await userbot.get_chat(f"@{chat_id}")).id
             msg = await userbot.get_messages(chat_id, message_id)
 
@@ -843,8 +851,10 @@ async def handle_large_file(file, sender, edit, caption):
     duration = metadata['duration']
     width = metadata['width']
     height = metadata['height']
-    
-    thumb_path = await screenshot(file, duration, sender)
+    try:
+        thumb_path = await screenshot(file, duration, sender)
+    except Exception:
+        thumb_path = None
     try:
         if file_extension in VIDEO_EXTENSIONS:
             dm = await pro.send_video(
