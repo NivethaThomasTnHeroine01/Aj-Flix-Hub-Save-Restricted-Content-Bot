@@ -20,17 +20,17 @@ YTUB_COOKIES = """
 """
 
 # ─── BOT / DATABASE CONFIG ──────────────────────────────────────────────────────
-API_ID       = os.getenv("API_ID", "")
-API_HASH     = os.getenv("API_HASH", "")
-BOT_TOKEN    = os.getenv("BOT_TOKEN", "")
-MONGO_DB     = os.getenv("MONGO_DB", "")
-DB_NAME      = os.getenv("DB_NAME", "telegram_downloader")
+API_ID       = os.getenv("API_ID", "22844653")
+API_HASH     = os.getenv("API_HASH", "9a656406da0a7a661348cd56a824f076")
+BOT_TOKEN    = os.getenv("BOT_TOKEN", "8937075665:AAG3GbLk2_6z4zVRhxMXtGXeJQMF5C7hB9w")
+MONGO_DB     = os.getenv("MONGO_DB", "mongodb+srv://ramsaranhero1:EMVwKybGR1lBF5DZ@cluster0.tst47tx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME      = os.getenv("DB_NAME", "ramsaranhero1")
 
 # ─── OWNER / CONTROL SETTINGS ───────────────────────────────────────────────────
-OWNER_ID     = list(map(int, os.getenv("OWNER_ID", "").split()))  # space-separated list
+OWNER_ID     = list(map(int, os.getenv("OWNER_ID", "8781094140").split()))  # space-separated list
 STRING       = os.getenv("STRING", None)  # optional session string
-LOG_GROUP    = int(os.getenv("LOG_GROUP", "-1001234456"))
-FORCE_SUB    = int(os.getenv("FORCE_SUB", "-10012345567"))
+LOG_GROUP    = int(os.getenv("LOG_GROUP", "-1004491677890"))
+FORCE_SUB    = int(os.getenv("FORCE_SUB", "-1004449916333"))
 
 # ─── SECURITY KEYS ──────────────────────────────────────────────────────────────
 MASTER_KEY   = os.getenv("MASTER_KEY", "gK8HzLfT9QpViJcYeB5wRa3DmN7P2xUq")  # session encryption
@@ -41,12 +41,12 @@ YT_COOKIES   = os.getenv("YT_COOKIES", YTUB_COOKIES)
 INSTA_COOKIES = os.getenv("INSTA_COOKIES", INST_COOKIES)
 
 # ─── USAGE LIMITS ───────────────────────────────────────────────────────────────
-FREEMIUM_LIMIT = int(os.getenv("FREEMIUM_LIMIT", "0"))
-PREMIUM_LIMIT  = int(os.getenv("PREMIUM_LIMIT", "500"))
+FREEMIUM_LIMIT = int(os.getenv("FREEMIUM_LIMIT", "3"))
+PREMIUM_LIMIT  = int(os.getenv("PREMIUM_LIMIT", "5000"))
 
 # ─── UI / LINKS ─────────────────────────────────────────────────────────────────
-JOIN_LINK     = os.getenv("JOIN_LINK", "https://t.me/team_spy_pro")
-ADMIN_CONTACT = os.getenv("ADMIN_CONTACT", "https://t.me/username_of_admin")
+JOIN_LINK     = os.getenv("JOIN_LINK", "https://t.me/Aj_Flix_hub")
+ADMIN_CONTACT = os.getenv("ADMIN_CONTACT", "https://t.me/Ajaytrams")
 
 # ════════════════════════════════════════════════════════════════════════════════
 # ░ PREMIUM PLANS CONFIGURATION
